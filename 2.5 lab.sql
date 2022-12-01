@@ -111,8 +111,11 @@ LIMIT 10
 
 -- 14.How many films include Behind the Scenes content?
 
+select special_features from film;
+
 SELECT special_features, COUNT(special_features) AS "films w/ BTS" 
 FROM film
+where special_features = "Behind the scenes"
 ORDER BY special_features
 ;
 
